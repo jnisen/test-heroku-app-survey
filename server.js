@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const cookieParser = require('cookie-parser');
+const port = process.env.PORT || 3000;
 
 
 app.use(cookieParser())
@@ -87,5 +88,5 @@ app.get('/getCookie', function (req, res) {
 
 app.use(express.static('public'));
 
-app.listen(3000, function () { console.log('Listen on 3000'); });
+app.listen(port, function () { console.log('Listen on 3000'); });
 
